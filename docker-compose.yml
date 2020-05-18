@@ -8,7 +8,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./deny/:/php-code/deny/ # save polls and submissions on host
+      - ./deny/:/php-code/deny/ 
   watchtower:
     container_name: watchtower
     image: containrrr/watchtower
