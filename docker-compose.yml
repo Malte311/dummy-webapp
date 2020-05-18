@@ -1,11 +1,16 @@
 version: "2"
 
 services:
-  forms:
+  dummy:
     image: Malte311/dummy-webapp
     #build: .
     container_name: webapp
     ports:
       - "80:80"
     volumes:
-      - ./deny/:/php-code/deny/ # save polls and submissions on host
+	    - ./deny/:/php-code/deny/ # save polls and submissions on host
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
