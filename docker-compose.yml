@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  forms:
+    image: Malte311/dummy-webapp
+    #build: .
+    container_name: webapp
+    ports:
+      - "80:80"
+    volumes:
+      - ./deny/:/php-code/deny/ # save polls and submissions on host
